@@ -12,11 +12,11 @@ export abstract class Duck {
   }
   
   public performFly(): void {
-    this.flyBehavior.fly();
+    this.flyBehavior?.fly();
   }
   
   public performQuack(): void {
-    this.quackBehavior.quack();
+    this.quackBehavior?.quack();
   }
 
   public setFlyBehavior(flyBehavior: FlyBehavior): void {
