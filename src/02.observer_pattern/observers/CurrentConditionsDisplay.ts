@@ -3,11 +3,14 @@ import { Observer } from "../types/Observer";
 import { DisplayElement } from "../types/DisplayElement";
 
 export class CurrentConditionsDisplay implements Observer, DisplayElement {
-  private temprature: number = 0;
-  private humidity: number = 0;
+  private temprature: number;
+  private humidity: number;
   private weatherData: WeatherData;
 
   constructor(weatherData: WeatherData) {
+    this.temprature = 0;
+    this.humidity = 0;
+
     this.weatherData = weatherData;
     this.weatherData.registerObserver(this);
   }
