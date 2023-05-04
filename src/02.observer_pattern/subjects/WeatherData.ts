@@ -14,6 +14,18 @@ export class WeatherData implements Subject {
     this.presure = 0;
   }
 
+  public get getTemprature(): number {
+    return this.temprature;
+  }
+
+  public get getHumidity(): number {
+    return this.humidity;
+  }
+
+  public get getPresure(): number {
+    return this.presure;
+  }
+
   public registerObserver(observer: Observer): void {
     this.observers.push(observer);
   }
@@ -24,7 +36,7 @@ export class WeatherData implements Subject {
 
   public notifyObserver(): void {
     for (const observer of this.observers) {
-      observer.update(this.temprature, this.humidity, this.presure);
+      observer.update();
     }
   }
 

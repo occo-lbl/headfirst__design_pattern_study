@@ -15,9 +15,9 @@ export class CurrentConditionsDisplay implements Observer, DisplayElement {
     this.weatherData.registerObserver(this);
   }
 
-  public update(temprature: number, humidity: number): void {
-    this.temprature = temprature;
-    this.humidity = humidity;
+  public update(): void {
+    this.temprature = this.weatherData.getTemprature;
+    this.humidity = this.weatherData.getHumidity;
 
     this.display();
   }
