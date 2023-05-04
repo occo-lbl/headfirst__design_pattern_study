@@ -1,0 +1,14 @@
+{
+  // 下記のサイトの情報をもとに実装
+  // https://www.walbrix.co.jp/article/debug-typescript-with-ts-node.html
+  "configurations": [
+    {
+      "name": "Launch TypeScript Using ts-node",
+      "type": "node",
+      "request": "launch",
+      "skipFiles": ["<node_internals>/**","node_modules/**"],
+      "runtimeArgs": ["--nolazy", "-r", "ts-node/register"],
+      "program": "${file}"
+    }
+  ]
+}
