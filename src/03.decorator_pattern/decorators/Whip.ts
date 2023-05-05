@@ -2,7 +2,7 @@ import { CondimentDecorator } from "./CondimentDecorator";
 import { Beverage } from "../beverages/Beverage";
 
 export class Whip extends CondimentDecorator {
-  constructor(public beverage: Beverage) {
+  constructor(protected beverage: Beverage) {
     super();
 
     this.beverage = beverage;
