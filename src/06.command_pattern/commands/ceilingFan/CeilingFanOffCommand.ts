@@ -1,7 +1,7 @@
-import { Command } from '../types/Command';
-import { CeilingFan } from '../receivers/CeilingFan';
+import { Command } from '../../types/Command';
+import { CeilingFan } from '../../receivers/CeilingFan';
 
-export class CeilingFanHighCommand implements Command {
+export class CeilingFanOffCommand implements Command {
   private ceilingFan: CeilingFan;
   private prevSpeed: number = 0;
 
@@ -11,7 +11,7 @@ export class CeilingFanHighCommand implements Command {
 
   public execute(): void {
     this.prevSpeed = this.ceilingFan.getSpeed();
-    this.ceilingFan.hight();
+    this.ceilingFan.off();
   }
 
   public undo(): void {

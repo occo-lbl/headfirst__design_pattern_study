@@ -1,5 +1,5 @@
-import { Command } from '../types/Command';
-import { Stereo } from '../receivers/Stereo';
+import { Command } from '../../types/Command';
+import { Stereo } from '../../receivers/Stereo';
 
 export class StereoOnWithCDCommand implements Command {
   private stereo: Stereo;

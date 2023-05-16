@@ -1,10 +1,10 @@
 import { Light } from './receivers/Light';
-import { LightOnCommand } from './commands/LightOnCommand';
-import { LightOffCommand } from './commands/LightOffCommand';
+import { LightOnCommand } from './commands//light/LightOnCommand';
+import { LightOffCommand } from './commands/light/LightOffCommand';
 import { RemoteControl } from './invokers/RemoteControl';
 import { Stereo } from './receivers/Stereo';
-import { StereoOnWithCDCommand } from './commands/StereoOnWithCDCommand';
-import { StereoOffCommand } from './commands/StereoOffCommand';
+import { StereoOnWithCDCommand } from './commands//stereo/StereoOnWithCDCommand';
+import { StereoOffCommand } from './commands/stereo/StereoOffCommand';
 
 function run() {
   // インボーカ

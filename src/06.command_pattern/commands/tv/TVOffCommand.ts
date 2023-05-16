@@ -1,5 +1,5 @@
-import { Command } from '../types/Command';
-import { TV } from '../receivers/TV';
+import { Command } from '../../types/Command';
+import { TV } from '../../receivers/TV';
 
 export class TVOffCommand implements Command {
   private tv: TV;

@@ -1,8 +1,8 @@
 import { CeilingFan } from './receivers/CeilingFan';
 import { RemoteControl } from './invokers/RemoteControl';
-import { CeilingFanHighCommand } from './commands/CeilingFanHighCommand';
-import { CeilingFanMediumCommand } from './commands/CeilingFanMediumCommand';
-import { CeilingFanOffCommand } from './commands/CeilingFanOffCommand';
+import { CeilingFanHighCommand } from './commands/ceilingFan/CeilingFanHighCommand';
+import { CeilingFanMediumCommand } from './commands/ceilingFan/CeilingFanMediumCommand';
+import { CeilingFanOffCommand } from './commands/ceilingFan/CeilingFanOffCommand';
 
 function run() {
   // インボーカ

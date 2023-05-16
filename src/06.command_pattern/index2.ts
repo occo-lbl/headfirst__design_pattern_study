@@ -1,6 +1,6 @@
 import { Light } from './receivers/Light';
-import { LightOnCommand } from './commands/LightOnCommand';
-import { LightOffCommand } from './commands/LightOffCommand';
+import { LightOnCommand } from './commands/light/LightOnCommand';
+import { LightOffCommand } from './commands/light/LightOffCommand';
 import { RemoteControl } from './invokers/RemoteControl';
 
 function run() {
