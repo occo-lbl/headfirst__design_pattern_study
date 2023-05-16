@@ -4,6 +4,7 @@ import { NoCommand } from '../commands/NoCommand';
 export class RemoteControl {
   private onCommands: Command[] = [];
   private offCommands: Command[] = [];
+  private undoCommand: Command;
 
   constructor() {
     const noCommand = new NoCommand();
@@ -12,6 +13,8 @@ export class RemoteControl {
       this.onCommands[i] = noCommand;
       this.offCommands[i] = noCommand;
     }
+
+    this.undoCommand = noCommand;
   }
 
   public setCommand(slot: number, onCommand: Command, offCommand: Command): void {
@@ -21,10 +24,16 @@ export class RemoteControl {
 
   public onButtonWasPressed(slot: number): void {
     this.onCommands[slot].execute();
+    this.undoCommand = this.onCommands[slot];
   }
 
   public offButtonWasPressed(slot: number): void {
     this.offCommands[slot].execute();
+    this.undoCommand = this.offCommands[slot];
+  }
+
+  public undoButtonWasPudhed(): void {
+    this.undoCommand.undo();
   }
 
   public printAllCommands(): string {
@@ -37,6 +46,9 @@ export class RemoteControl {
 
       result += `[${slotNum}] ${onCommandName} ${offCommandName}\n`;
     });
+
+    const undoCommandName = this.undoCommand.constructor.name;
+    result += `[アンドゥ] ${undoCommandName}`;
 
     return result;
   }

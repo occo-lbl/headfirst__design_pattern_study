@@ -11,4 +11,6 @@ export class StereoOffCommand implements Command {
   public execute(): void {
     this.stereo.off();
   }
+
+  public undo(): void {}
 }

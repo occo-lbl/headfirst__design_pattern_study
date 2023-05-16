@@ -11,4 +11,8 @@ export class LightOffCommand implements Command {
   public execute(): void {
     this.light.off();
   }
+
+  public undo(): void {
+    this.light.on();
+  }
 }
