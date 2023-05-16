@@ -1,19 +1,19 @@
-import { Light } from "./receivers/Light";
-import { LightOnCommand } from "./commands/LightOnCommand";
-import { LightOffCommand } from "./commands/LightOffCommand";
-import { RemoteControl } from "./invokers/RemoteControl";
-import { Stereo } from "./receivers/Stereo";
-import { StereoOnWithCDCommand } from "./commands/StereoOnWithCDCommand";
-import { StereoOffCommand } from "./commands/StereoOffCommand";
+import { Light } from './receivers/Light';
+import { LightOnCommand } from './commands/LightOnCommand';
+import { LightOffCommand } from './commands/LightOffCommand';
+import { RemoteControl } from './invokers/RemoteControl';
+import { Stereo } from './receivers/Stereo';
+import { StereoOnWithCDCommand } from './commands/StereoOnWithCDCommand';
+import { StereoOffCommand } from './commands/StereoOffCommand';
 
 function run() {
   // インボーカ
   const remoteControl = new RemoteControl();
 
   // レシーバ
-  const livingRoomLight = new Light("リビングルーム");
-  const kitchebRoomLight = new Light("キッチン");
-  const stereo = new Stereo("リビングルーム");
+  const livingRoomLight = new Light('リビングルーム');
+  const kitchebRoomLight = new Light('キッチン');
+  const stereo = new Stereo('リビングルーム');
 
   // コマンド
   const livingRoomLightOn: LightOnCommand = new LightOnCommand(livingRoomLight);

@@ -1,5 +1,5 @@
-import { Command } from "../types/Command";
-import { NoCommand } from "../commands/NoCommand";
+import { Command } from '../types/Command';
+import { NoCommand } from '../commands/NoCommand';
 
 export class RemoteControl {
   private onCommands: Command[] = [];
@@ -28,7 +28,7 @@ export class RemoteControl {
   }
 
   public printAllCommands(): string {
-    let result = "\n ---------- リモコン ---------- \n";
+    let result = '\n ---------- リモコン ---------- \n';
 
     this.onCommands.forEach((v, i) => {
       const slotNum = `スロット ${i}`;

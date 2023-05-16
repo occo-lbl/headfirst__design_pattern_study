@@ -1,5 +1,5 @@
-import { Command } from "../types/Command";
-import { Light } from "../receivers/Light";
+import { Command } from '../types/Command';
+import { Light } from '../receivers/Light';
 
 export class LightOffCommand implements Command {
   private light: Light;

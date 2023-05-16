@@ -1,5 +1,5 @@
 export class Light {
-  private place: string = "";
+  private place: string = '';
 
   constructor(place: string) {
     this.place = place;

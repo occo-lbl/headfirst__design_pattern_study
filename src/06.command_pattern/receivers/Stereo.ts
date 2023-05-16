@@ -1,5 +1,5 @@
 export class Stereo {
-  private place: string = "";
+  private place: string = '';
 
   constructor(place: string) {
     this.place = place;
