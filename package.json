@@ -1,0 +1,17 @@
+{
+  "name": "headfirst__design_pattern_study",
+  "version": "1.0.0",
+  "description": "「Head Firstデザインパターン 第2版」のソースをTypescriptで書き直すためのリポジトリです。",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ein-studie/headfirst__design_pattern_study.git"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  }
+}

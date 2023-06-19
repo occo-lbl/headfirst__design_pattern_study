@@ -5,3 +5,8 @@
  - パターンの実装は、developerから分岐したfeatureブランチで行うこと。
  - 1つのパターンが実装できたら、developerにマージする。
  - すべてのパターンの実装が完了したら、mainにマージする。
+
+## マージの方針
+ - developer → master  : Create a merge commit
+ - feature → developer : Squash and merge
+ 
